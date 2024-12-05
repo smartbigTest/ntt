@@ -12,7 +12,7 @@ async function main() {
    const Erc20Token = await ethers.getContractFactory("NTT");
    const erc20Token = await Erc20Token.deploy(initialSupply);
    await erc20Token.waitForDeployment()
-   console.log(await erc20Token.getAddress())
+   console.log(await erc20Token.getAddress());
 }
 
 main().catch((error) => {
